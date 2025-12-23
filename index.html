@@ -1,257 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abinaya Sri Portfolio</title>
 
-    <!-- Remix Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css" />
-    <title>Abinaya Sri</title>
-  </head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <body>
-    <!-- NAV -->
-    <nav>
-      <div class="nav__bar">
-        <a href="#"><span class="logo nav__logo">A</span></a>
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav__bar">
+    <div class="logo">A</div>
+    <div class="nav__menu__btn" id="menu-btn">
+      <i class="ri-menu-3-line"></i>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="nav__overlay" id="nav-overlay"></div>
 
-        <div class="nav__menu__btn" id="menu-btn">
-          <i class="ri-menu-3-line"></i>
+<!-- HEADER -->
+<header class="section__container header__container" id="home">
+  <div class="header__content">
+    <h1>Abinaya Sri</h1>
+    <p class="section__description">
+      Frontend Developer | SEO Specialist | UI/UX Enthusiast
+    </p>
+    <button class="btn">Hire Me</button>
+  </div>
+  <div class="header__image">
+    <img src="https://via.placeholder.com/400" alt="Abinaya Sri">
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="section__container about__container" id="about">
+  <div class="about__image">
+    <img src="https://via.placeholder.com/350" alt="About Me">
+  </div>
+  <div class="about__content">
+    <h2 class="section__header">About Me</h2>
+    <p class="section__description">
+      I started my journey with Artificial Intelligence & Web development. I help brands build impactful online presence with modern, responsive, and SEO-friendly websites. I am passionate about UI/UX, clean code, and delivering measurable results.
+    </p>
+    <button class="btn">Download CV</button>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section__container" id="services">
+  <h2 class="section__header">Services</h2>
+  <div class="service__grid">
+    <div class="service__card">
+      <span><i class="ri-code-line"></i></span>
+      <h4>Web Development</h4>
+      <p>Building responsive, modern, and high-performance websites using HTML, CSS, JavaScript, React, and more.</p>
+    </div>
+    <div class="service__card">
+      <span><i class="ri-layout-line"></i></span>
+      <h4>UI/UX Design</h4>
+      <p>Designing intuitive interfaces and seamless user experiences to make your website engaging and easy to use.</p>
+    </div>
+    <div class="service__card">
+      <span><i class="ri-search-line"></i></span>
+      <h4>SEO Optimization</h4>
+      <p>Optimizing websites for search engines to increase organic traffic and improve online visibility.</p>
+    </div>
+    <div class="service__card">
+      <span><i class="ri-store-line"></i></span>
+      <h4>E-commerce Solutions</h4>
+      <p>Creating scalable online stores with secure payment integration and product management systems.</p>
+    </div>
+    <div class="service__card">
+      <span><i class="ri-paint-fill"></i></span>
+      <h4>Branding & Maintenance</h4>
+      <p>Providing logo design, brand identity, and ongoing website support to keep your online presence professional.</p>
+    </div>
+    <div class="service__card">
+      <span><i class="ri-share-circle-line"></i></span>
+      <h4>Digital Marketing</h4>
+      <p>Social media strategies, content marketing, and campaigns to grow your brand online.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="section__container" id="achievements">
+  <h2 class="section__header">Achievements</h2>
+  <div class="achievements__grid">
+    <div class="achievement__card">
+      <span>🏆</span>
+      <h4>Founded Archon Tech</h4>
+      <p>Launched Archon Tech to deliver professional websites and SEO solutions to clients.</p>
+    </div>
+    <div class="achievement__card">
+      <span>📈</span>
+      <h4>First Client Project</h4>
+      <p>Successfully completed first real client project improving performance and SEO.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section__container" id="projects">
+  <h2 class="section__header">Projects</h2>
+  <div class="portfolio__grid">
+    <a href="project-document.pdf" target="_blank" class="portfolio__card">
+      <img src="https://via.placeholder.com/400x250" alt="Business Project">
+      <div class="portfolio__content">
+        <h4>Business Website Project</h4>
+        <p>Responsive business website with SEO and modern design.</p>
+        <div class="project__links">
+          <span>📄 View Document</span>
+          <a href="https://github.com/yourusername/project-repo" target="_blank"><i class="ri-github-fill"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="ri-linkedin-fill"></i></a>
+          <a href="https://instagram.com/archon_tech" target="_blank"><i class="ri-instagram-fill"></i></a>
         </div>
       </div>
+    </a>
+  </div>
+</section>
 
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#service">Services</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<!-- CONTACT -->
+<section class="section__container" id="contact">
+  <h2 class="section__header">Contact Me</h2>
+  <form action="mailto:abinayaent163@gmail.com" method="post" enctype="text/plain">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    <label>Message:</label>
+    <textarea name="message" rows="5" required></textarea>
+    <input type="submit" value="Send">
+  </form>
+</section>
 
-      <a href="#contact" class="btn btn__large">Contact</a>
-    </nav>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 Abinaya Sri | All rights reserved</p>
+</footer>
 
-    <!-- MOBILE NAV OVERLAY -->
-    <div class="nav__overlay" id="nav-overlay"></div>
 
-    <!-- HERO -->
-    <header class="section__container header__container" id="home">
-      <div class="header__image">
-        <img src="header.jpeg" alt="Abinaya Sri" />
-      </div>
-
-      <div class="header__content">
-        <div>
-          <h1>
-            Abinaya Sri<br />
-            frontend developer<br />
-            SEO specialist
-          </h1>
-        </div>
-
-        <p class="section__description">
-          I’m a web designer passionate about creating modern, user-friendly
-          websites that help businesses grow online. Skilled in combining design
-          and functionality, I focus on delivering clean, responsive, and
-          impactful digital experiences.
-        </p>
-
-        <div class="header__btn">
-          <button class="btn">Hire Me Now</button>
-        </div>
-      </div>
-    </header>
-
-    <!-- ABOUT -->
-    <section class="section__container about__container" id="about">
-      <div class="about__image">
-        <img src="about.jpg" alt="About Abinaya Sri" class="about__img" />
-      </div>
-
-      <div class="about__content">
-        <h2 class="section__header">About Me</h2>
-
-        <p class="section__description">
-          I started my journey with a strong interest in Artificial Intelligence
-          & Machine Learning during my studies at Sankara College of Science and
-          Commerce. Over time, I turned my focus toward web design and
-          development, launching Archon Tech to help businesses establish a
-          professional online presence. My mission is simple: deliver websites
-          that not only look great but also help clients grow and achieve
-          measurable results.
-        </p>
-
-        <div class="about__btn">
-          <button class="btn">Download CV</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="section__container service__container" id="service">
-      <h2 class="section__header">What I Do</h2>
-
-      <div class="service__grid">
-        <div class="service__card">
-          <span><i class="ri-window-fill"></i></span>
-          <h4>Website Design</h4>
-          <p>
-            Professional business and e-commerce websites built with modern
-            design, user-friendly layouts, and high performance.
-          </p>
-        </div>
-
-        <div class="service__card">
-          <span><i class="ri-store-line"></i></span>
-          <h4>E-commerce Solutions</h4>
-          <p>
-            Scalable online stores with payment integration, product management,
-            and secure checkout systems for businesses.
-          </p>
-        </div>
-
-        <div class="service__card">
-          <span><i class="ri-smartphone-line"></i></span>
-          <h4>Responsive Development</h4>
-          <p>
-            Websites designed to look and work seamlessly across devices – from
-            desktops to smartphones – for better reach.
-          </p>
-        </div>
-
-        <div class="service__card">
-          <span><i class="ri-seo-line"></i></span>
-          <h4>SEO Optimization</h4>
-          <p>
-            Optimizing websites for search engines, helping brands increase
-            visibility, attract traffic, and grow their audience.
-          </p>
-        </div>
-
-        <div class="service__card">
-          <span><i class="ri-share-circle-line"></i></span>
-          <h4>Digital Marketing</h4>
-          <p>
-            Helping brands reach clients through social media strategies,
-            content marketing, and targeted campaigns.
-          </p>
-        </div>
-
-        <div class="service__card">
-          <span><i class="ri-paint-fill"></i></span>
-          <h4>Branding & Maintenance</h4>
-          <p>
-            From logos to ongoing website support, we ensure your brand stays
-            professional, updated, and impactful online.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACHIEVEMENTS -->
-    <section class="section__container achievements__container" id="achievements">
-      <h2 class="section__header">Achievements</h2>
-
-      <div class="achievements__grid">
-        <div class="achievement__card">
-          <span>🏆</span>
-          <h4>Founded Archon Tech</h4>
-          <p>
-            Successfully launched Archon Tech to deliver professional websites
-            and SEO-focused digital solutions for growing businesses.
-          </p>
-        </div>
-
-        <div class="achievement__card">
-          <span>📈</span>
-          <h4>First Client Project Completed</h4>
-          <p>
-            Completed a real-world frontend and SEO project with measurable
-            improvements in performance and visibility.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section__container portfolio__container" id="projects">
-      <h2 class="section__header">Projects</h2>
-
-      <div class="portfolio__grid">
-        <!-- FULL CARD CLICK -->
-        <a
-          href="project-document.pdf"
-          target="_blank"
-          class="portfolio__card"
-        >
-          <img src="project1.jpg" alt="Business Website Project" />
-
-          <div class="portfolio__content">
-            <h4>Business Website Project</h4>
-            <p>
-              A fully responsive business website developed with SEO best
-              practices, clean UI, and performance optimization.
-            </p>
-
-            <div class="project__links">
-              <span>📄 View Project Document</span>
-
-              <a
-                href="https://github.com/yourusername/project-repo"
-                target="_blank"
-              >
-                <i class="ri-github-fill"></i>
-              </a>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section__container contact__container" id="contact">
-      <div class="logo">A</div>
-
-      <h2 class="section__header">Let’s Work Together!</h2>
-
-      <p class="section__description">
-        Building impactful digital experiences, one website at a time.
-      </p>
-
-      <div class="contact__socials">
-        <a
-          href="https://www.instagram.com/archon_tech"
-          target="_blank"
-        >
-          <img src="instagram.png" width="30" height="30" />
-        </a>
-
-        <a
-          href="https://www.linkedin.com"
-          target="_blank"
-        >
-          <img src="linkedin.jpg" width="30" height="30" />
-        </a>
-
-        <a
-          href="https://github.com/dashboard"
-          target="_blank"
-        >
-          <i class="ri-github-fill"></i>
-        </a>
-      </div>
-    </section>
-
-    <footer class="footer">
-      Copyright © 2025 Abinaya Sri. All rights reserved.
-    </footer>
-
-    <script src="main.js"></script>
-  </body>
+<script src="main.js"></script>
+</body>
 </html>
