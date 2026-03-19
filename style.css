@@ -3,18 +3,19 @@
 
 /* VARIABLES */
 :root {
-  --primary: #6c63ff;
-  --secondary: #00bcd4;
-  --accent: #ff7eb3;
+  --primary: #ec4899;
+  --secondary: #8b5cf6;
 
-  --bg-gradient: linear-gradient(135deg, #f8fafc, #e0f2fe, #fce7f3);
+  --bg-gradient: linear-gradient(135deg, #ffe4e6, #f5d0fe, #e0e7ff);
 
-  --card-bg: #ffffff;
+  --card-light: linear-gradient(135deg, #ffffff, #fdf4ff);
+  --card-pink: linear-gradient(135deg, #ffe4e6, #fbcfe8);
+
   --text-dark: #1e293b;
   --text-light: #64748b;
 
   --border: rgba(0,0,0,0.08);
-  --gradient: linear-gradient(135deg, #6c63ff, #00bcd4, #ff7eb3);
+  --btn-gradient: linear-gradient(135deg, #ec4899, #8b5cf6);
 
   --max-width: 1200px;
 }
@@ -27,6 +28,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* BODY */
 body {
   background: var(--bg-gradient);
   color: var(--text-dark);
@@ -69,7 +71,7 @@ nav {
 .logo {
   font-weight: 700;
   font-size: 1.5rem;
-  background: var(--gradient);
+  background: var(--btn-gradient);
   padding: 0.5rem 1rem;
   border-radius: 10px;
   color: white;
@@ -108,15 +110,16 @@ nav {
   gap: 2rem;
 }
 
-/* PROFILE IMAGE */
+/* PROFILE IMAGE (OVAL) */
 .profile-img {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 180px;
   object-fit: cover;
 
-  border-radius: 20px;
-  padding: 6px;
-  background: var(--gradient);
+  border-radius: 50% / 60%;
+
+  padding: 5px;
+  background: var(--btn-gradient);
 
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   margin: auto;
@@ -135,7 +138,7 @@ nav {
 
 /* BUTTON */
 .btn {
-  background: var(--gradient);
+  background: var(--btn-gradient);
   color: white;
   border: none;
   border-radius: 12px;
@@ -161,7 +164,7 @@ nav {
   color: var(--text-light);
 }
 
-/* GRID */
+/* SERVICE GRID */
 .service__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -169,43 +172,58 @@ nav {
   margin-top: 2rem;
 }
 
-/* SQUARE CARDS */
+/* SERVICE & PROJECT CARDS (SQUARE + ROUNDED) */
 .service__card,
-.achievement__card,
 .portfolio__card {
-  background: var(--card-bg);
-
-  aspect-ratio: 1 / 1; /* perfect square */
+  aspect-ratio: 1 / 1;
 
   border-radius: 18px;
-  border: 2px solid transparent;
 
-  /* Gradient border trick */
-  background-image: 
-    linear-gradient(#fff, #fff), 
-    var(--gradient);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  background: var(--card-light);
+
+  border: 1px solid var(--border);
 
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   padding: 1.5rem;
   text-align: center;
 
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-/* HOVER EFFECT */
-.service__card:hover,
-.achievement__card:hover,
-.portfolio__card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+/* ACHIEVEMENT CONTAINER */
+.achievement__container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ACHIEVEMENT CARDS (SMALL) */
+.achievement__card {
+  width: 180px;
+  height: 180px;
+
+  border-radius: 16px;
+
+  background: var(--card-pink);
+
+  border: 1px solid var(--border);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 1rem;
 }
 
 /* ICON */
@@ -219,17 +237,12 @@ nav {
 form {
   max-width: 500px;
   margin: 2rem auto;
-  background: #ffffff;
+  background: var(--card-light);
 
   border-radius: 18px;
   padding: 2rem;
 
-  border: 2px solid transparent;
-  background-image: 
-    linear-gradient(#fff, #fff), 
-    var(--gradient);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  border: 1px solid var(--border);
 
   display: flex;
   flex-direction: column;
@@ -237,17 +250,25 @@ form {
 }
 
 /* INPUTS */
-form input, form textarea {
+form input,
+form textarea {
   padding: 0.8rem;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: #f1f5f9;
+  background: #fdf2f8;
   color: var(--text-dark);
+}
+
+/* HOVER EFFECT */
+.service__card:hover,
+.portfolio__card:hover,
+.achievement__card:hover {
+  transform: translateY(-6px) scale(1.03);
 }
 
 /* FOOTER */
 .footer {
-  background: #ffffff;
+  background: rgba(255,255,255,0.6);
   text-align: center;
   padding: 1rem;
   color: var(--text-light);
