@@ -84,6 +84,7 @@ nav {
 
 .nav__links a {
   color: var(--text-main);
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -136,12 +137,9 @@ nav {
   width: 120px;
   height: 150px;
   object-fit: cover;
-
   border-radius: 50% / 60%;
-
   border: 2px solid var(--primary);
   box-shadow: 0 0 20px cyan, 0 0 40px purple;
-
   margin: auto;
 }
 
@@ -153,19 +151,15 @@ nav {
   justify-items: center;
 }
 
-/* CARDS PERFECT ALIGN */
-.service__card,
-.portfolio__card,
-.achievement__card {
+/* SERVICE CARDS (UNCHANGED) */
+.service__card {
   width: 100%;
   max-width: 220px;
   height: 220px;
 
   border-radius: 14px;
-
   background: var(--card-bg);
   backdrop-filter: blur(10px);
-
   border: 1px solid var(--border);
 
   display: flex;
@@ -174,14 +168,10 @@ nav {
   align-items: center;
 
   padding: 1rem;
-
   transition: 0.3s;
 }
 
-/* HOVER */
-.service__card:hover,
-.portfolio__card:hover,
-.achievement__card:hover {
+.service__card:hover {
   transform: translateY(-6px);
   box-shadow: var(--glow);
   border-color: var(--primary);
@@ -192,6 +182,64 @@ nav {
   font-size: 1.8rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
+}
+
+/* PROJECT & ACHIEVEMENT GRID */
+.portfolio__grid,
+.achievement__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* VERTICAL CARDS */
+.portfolio__card,
+.achievement__card {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+/* IMAGE */
+.portfolio__card img,
+.achievement__card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
+/* CONTENT */
+.card__content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__content h4 {
+  margin-bottom: 0.4rem;
+}
+
+.card__content p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* HOVER */
+.portfolio__card:hover,
+.achievement__card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--glow);
+  border-color: var(--primary);
 }
 
 /* TEXT */
@@ -228,6 +276,26 @@ form textarea {
   border: 1px solid var(--border);
   background: #020617;
   color: white;
+}
+
+/* CONTACT ICONS CENTER */
+.contact__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact__socials a {
+  font-size: 1.6rem;
+  color: var(--primary);
+  transition: 0.3s;
+}
+
+.contact__socials a:hover {
+  color: var(--secondary);
+  transform: scale(1.2);
 }
 
 /* FOOTER */
