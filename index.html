@@ -3,275 +3,272 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Abinaya Sri — Frontend Developer & SEO Specialist</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+<title>Abinaya Sri — Web Developer & Founder</title>
+<meta name="description" content="Abinaya Sri — founder of Archon Tech and AI/ML student. Web developer building responsive, SEO-friendly websites and AI-powered products from Tamil Nadu, India."/>
+<meta property="og:title" content="Abinaya Sri — Web Developer & Founder"/>
+<meta property="og:description" content="Founder of Archon Tech. Building modern websites and AI-powered products."/>
+<meta property="og:type" content="website"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --purple: #6C47FF;
-    --purple-light: #EEE9FF;
-    --purple-dark: #3B1FA8;
-    --teal: #0ABFA3;
-    --teal-light: #E0F7F4;
-    --coral: #FF6B47;
-    --ink: #0F0E17;
-    --ink2: #2D2B3D;
-    --muted: #6B6880;
-    --border: rgba(15,14,23,0.1);
-    --bg: #FAFAF8;
-    --card: #FFFFFF;
-    --serif: 'DM Serif Display', serif;
-    --sans: 'DM Sans', sans-serif;
+    --bg: #ECECE9;
+    --sd-dark: #C7C8C3;
+    --sd-light: #FFFFFF;
+    --green: #1789A0;
+    --green-deep: #115F72;
+    --green-bg: #D8EAEE;
+    --green-sd-dark: #B9D3D8;
+    --green-sd-light: #FFFFFF;
+    --purple: #3C1C6E;
+    --purple-bg: #E4DEEF;
+    --purple-sd-dark: #C7BFD9;
+    --purple-sd-light: #FFFFFF;
+    --leaf: #0F7A46;
+    --ink: #24261F;
+    --ink-soft: #676B60;
+    --dark-bg: #1D2224;
+    --dark-sd-dark: #14171A;
+    --dark-sd-light: #262C2E;
+    --display: 'Space Grotesk', sans-serif;
+    --sans: 'Inter', sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--green);outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
 
-  /* NAV */
-  nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;padding:1rem 2.5rem;}
-  .nav-logo{font-family:var(--serif);font-size:20px;color:var(--ink);}
-  .nav-links{display:flex;gap:2rem;list-style:none;}
-  .nav-links a{font-size:13px;font-weight:400;color:var(--muted);text-decoration:none;letter-spacing:0.02em;transition:color 0.2s;}
-  .nav-links a:hover{color:var(--purple);}
-  .nav-cta{background:var(--purple);color:#fff;border:none;padding:8px 18px;border-radius:100px;font-size:13px;font-weight:500;cursor:pointer;font-family:var(--sans);transition:background 0.2s;}
-  .nav-cta:hover{background:var(--purple-dark);}
+  .neu{background:var(--bg);border-radius:20px;box-shadow:8px 8px 16px var(--sd-dark),-8px -8px 16px var(--sd-light);}
+  .neu-in{background:var(--bg);border-radius:20px;box-shadow:inset 6px 6px 12px var(--sd-dark),inset -6px -6px 12px var(--sd-light);}
+  .neu-green{background:var(--green-bg);border-radius:16px;box-shadow:6px 6px 12px var(--green-sd-dark),-6px -6px 12px var(--green-sd-light);}
+  .neu-purple{background:var(--purple-bg);border-radius:16px;box-shadow:6px 6px 12px var(--purple-sd-dark),-6px -6px 12px var(--purple-sd-light);}
+  .neu-dark{background:var(--dark-bg);box-shadow:8px 8px 16px var(--dark-sd-dark),-8px -8px 16px var(--dark-sd-light);}
 
-  /* HERO */
-  .hero{min-height:90vh;display:flex;align-items:center;padding:4rem 2.5rem;gap:3rem;position:relative;overflow:hidden;}
-  .hero-bg{position:absolute;inset:0;pointer-events:none;}
-  .hero-blob{position:absolute;width:520px;height:520px;border-radius:50%;background:var(--purple-light);opacity:0.55;right:-100px;top:-80px;z-index:0;}
-  .hero-blob2{position:absolute;width:280px;height:280px;border-radius:50%;background:var(--teal-light);opacity:0.45;left:30%;bottom:-60px;z-index:0;}
-  .hero-left{flex:1;position:relative;z-index:1;max-width:580px;}
-  .hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--purple-light);color:var(--purple-dark);font-size:12px;font-weight:500;padding:5px 14px;border-radius:100px;margin-bottom:1.5rem;letter-spacing:0.03em;}
-  .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite;}
-  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
-  .hero h1{font-family:var(--serif);font-size:clamp(36px,5vw,62px);line-height:1.1;color:var(--ink);margin-bottom:0.75rem;}
-  .hero h1 em{color:var(--purple);font-style:italic;}
-  .hero-sub{font-size:16px;color:var(--muted);max-width:480px;margin-bottom:2rem;line-height:1.7;}
-  .hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
-  .btn-primary{background:var(--purple);color:#fff;border:none;padding:12px 26px;border-radius:100px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--sans);transition:background 0.2s;text-decoration:none;display:inline-block;}
-  .btn-primary:hover{background:var(--purple-dark);}
-  .btn-secondary{background:transparent;color:var(--ink);border:1.5px solid var(--border);padding:12px 26px;border-radius:100px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--sans);transition:all 0.2s;text-decoration:none;display:inline-block;}
-  .btn-secondary:hover{border-color:var(--purple);color:var(--purple);}
-  .hero-right{position:relative;z-index:1;flex-shrink:0;}
-  .avatar-wrap{width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--purple-light),#d4c5ff);display:flex;align-items:center;justify-content:center;border:4px solid #fff;position:relative;}
-  .avatar-initials{font-family:var(--serif);font-size:64px;color:var(--purple-dark);}
-  .avatar-tag{position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:11px;font-weight:500;padding:4px 14px;border-radius:100px;white-space:nowrap;}
+  #preloader{position:fixed;inset:0;z-index:999;background:var(--bg);display:flex;align-items:center;justify-content:center;transition:opacity 0.5s ease;}
+  #preloader.hide{opacity:0;pointer-events:none;}
+  #preloader img{width:96px;height:96px;object-fit:contain;animation:preloaderPulse 1.4s ease-in-out infinite;}
+  @keyframes preloaderPulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(0.92);opacity:0.7;}}
+  @media (prefers-reduced-motion: reduce){ #preloader img{animation:none;} }
 
-  /* SECTIONS */
-  section{padding:4rem 2.5rem;}
-  .sec-inner{max-width:900px;margin:0 auto;}
-  .sec-eyebrow{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:var(--purple);margin-bottom:0.5rem;}
-  .sec-title{font-family:var(--serif);font-size:clamp(26px,3vw,38px);color:var(--ink);margin-bottom:2rem;line-height:1.2;}
-  .divider{border:none;border-top:1px solid var(--border);margin:0;}
+  .nav-logo-mark{display:flex;align-items:center;gap:9px;}
+  .nav-logo-mark img{width:26px;height:26px;object-fit:contain;}
 
-  /* ABOUT */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
-  .about-text{font-size:15px;color:var(--muted);line-height:1.85;}
-  .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  .stat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.25rem;text-align:center;}
-  .stat-num{font-family:var(--serif);font-size:32px;color:var(--purple);display:block;}
-  .stat-label{font-size:12px;color:var(--muted);margin-top:2px;}
+  nav{position:sticky;top:16px;z-index:100;margin:0 auto;max-width:1040px;display:flex;justify-content:space-between;align-items:center;padding:0.9rem 1.75rem;border-radius:100px;}
+  .nav-logo{font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink);}
+  .nav-links{display:flex;gap:1.75rem;list-style:none;}
+  .nav-links a{font-size:13px;font-weight:500;color:var(--ink-soft);text-decoration:none;transition:color 0.2s;}
+  .nav-links a:hover{color:var(--green);}
+  .nav-cta{background:var(--green);color:#fff;border:none;padding:9px 20px;border-radius:100px;font-size:13px;font-weight:500;cursor:pointer;font-family:var(--sans);transition:background 0.2s;}
+  .nav-cta:hover{background:var(--green-deep);}
 
-  /* SKILLS */
-  .skills-section{background:var(--ink);}
-  .skills-section .sec-eyebrow{color:var(--teal);}
-  .skills-section .sec-title{color:#fff;}
+  section{padding:4rem 1.75rem;}
+  .sec-inner{max-width:1000px;margin:0 auto;}
+  .sec-eyebrow{font-size:13px;font-weight:500;color:var(--green);margin-bottom:0.5rem;}
+  .sec-title{font-family:var(--display);font-weight:600;font-size:clamp(26px,3vw,36px);color:var(--ink);margin-bottom:2rem;line-height:1.2;}
+
+  .hero{min-height:86vh;display:flex;align-items:center;padding:6rem 1.75rem 4rem;}
+  .hero-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:3rem;width:100%;}
+  .hero-left{flex:1.1;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:100px;margin-bottom:1.5rem;font-size:12px;font-weight:500;color:var(--green-deep);}
+  .badge-dot{width:7px;height:7px;border-radius:50%;background:var(--green);}
+  .hero h1{font-family:var(--display);font-weight:600;font-size:clamp(36px,5vw,56px);line-height:1.1;color:var(--ink);margin-bottom:1rem;}
+  .hero h1 span{color:var(--green);}
+  .hero-sub{font-size:16px;color:var(--ink-soft);max-width:460px;margin-bottom:2rem;}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn-primary{background:var(--green);color:#fff;border:none;padding:14px 28px;border-radius:100px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--sans);transition:background 0.2s;text-decoration:none;display:inline-block;}
+  .btn-primary:hover{background:var(--green-deep);}
+  .btn-secondary{color:var(--ink);padding:14px 28px;border-radius:100px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block;transition:box-shadow 0.15s;}
+  .btn-secondary:active{box-shadow:inset 4px 4px 8px var(--sd-dark),inset -4px -4px 8px var(--sd-light);}
+  .hero-right{flex:0.9;display:flex;justify-content:center;}
+  .photo-frame{width:280px;height:340px;border-radius:24px;padding:12px;}
+  .photo-frame img{width:100%;height:100%;object-fit:cover;border-radius:16px;display:block;}
+  .photo-fallback{width:100%;height:100%;border-radius:16px;background:var(--green);display:flex;align-items:center;justify-content:center;}
+  .photo-fallback span{font-family:var(--display);font-size:56px;color:#fff;}
+
+  .about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:start;padding:2.25rem;}
+  .about-text{font-size:15px;color:var(--ink-soft);}
+  .about-text p + p{margin-top:1rem;}
+  .stat-strip{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .stat{padding:1.1rem;text-align:center;}
+  .stat-num{font-family:var(--display);font-weight:600;font-size:28px;color:var(--green);display:block;}
+  .stat-label{font-size:12px;color:var(--ink-soft);margin-top:2px;}
+
+  .skills-panel{padding:2.5rem;}
+  .skill-group{margin-bottom:1.75rem;}
+  .skill-group:last-child{margin-bottom:0;}
+  .skill-group-label{font-size:12px;font-weight:500;color:var(--ink-soft);margin-bottom:0.75rem;}
   .skills-grid{display:flex;flex-wrap:wrap;gap:10px;}
-  .skill-pill{padding:8px 18px;border-radius:100px;font-size:13px;font-weight:400;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.06);}
-  .skill-pill.hl{background:var(--purple);color:#fff;border-color:var(--purple);}
-  .skill-pill.teal{background:var(--teal);color:#fff;border-color:var(--teal);}
+  .skill-pill{padding:9px 18px;border-radius:100px;font-size:13px;font-weight:500;color:var(--ink);}
+  .skill-pill.core{color:var(--green-deep);font-weight:600;}
 
-  /* SERVICES */
-  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
-  .svc-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:border-color 0.2s,transform 0.2s;}
-  .svc-card:hover{border-color:var(--purple);transform:translateY(-2px);}
-  .svc-icon{width:44px;height:44px;border-radius:12px;background:var(--purple-light);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
-  .svc-icon svg{width:20px;height:20px;stroke:var(--purple);fill:none;stroke-width:1.8;}
-  .svc-name{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:6px;}
-  .svc-desc{font-size:13px;color:var(--muted);line-height:1.65;}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+  .svc-card{padding:1.75rem;}
+  .svc-icon{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
+  .svc-icon svg{width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:1.8;}
+  .svc-name{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px;font-family:var(--display);}
+  .svc-desc{font-size:13px;color:var(--ink-soft);}
 
-  /* ACHIEVEMENTS */
-  .ach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
-  .ach-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;display:flex;gap:14px;align-items:flex-start;}
-  .ach-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .ach-icon.gold{background:#FFF8E6;}
-  .ach-icon.purple{background:var(--purple-light);}
-  .ach-icon svg{width:22px;height:22px;fill:none;stroke-width:1.8;}
-  .ach-icon.gold svg{stroke:#B87A00;}
-  .ach-icon.purple svg{stroke:var(--purple);}
-  .ach-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:4px;}
-  .ach-desc{font-size:13px;color:var(--muted);line-height:1.6;}
-  .prize-badge{display:inline-block;background:#FFF8E6;color:#B87A00;font-size:11px;font-weight:500;padding:3px 10px;border-radius:100px;margin-bottom:6px;}
+  .ach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-bottom:1.75rem;}
+  .ach-card{padding:1.5rem;display:flex;gap:14px;align-items:flex-start;}
+  .ach-icon{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .ach-icon svg{width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:1.8;}
+  .ach-title{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px;font-family:var(--display);}
+  .ach-desc{font-size:13px;color:var(--ink-soft);}
+  .prize-badge{display:inline-block;color:var(--green-deep);font-size:11px;font-weight:600;padding:4px 12px;border-radius:100px;margin-bottom:8px;}
+  .cert-strip{padding:1.5rem 1.75rem;display:flex;flex-wrap:wrap;gap:12px;}
+  .cert-chip{display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:100px;font-size:13px;}
+  .cert-chip .dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;}
+  .cert-name{font-weight:600;color:var(--ink);}
+  .cert-issuer{color:var(--ink-soft);}
 
-  /* PROJECTS */
-  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
-  .proj-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;}
-  .proj-card:hover{border-color:var(--purple);transform:translateY(-2px);}
-  .proj-thumb{height:140px;background:var(--purple-light);display:flex;align-items:center;justify-content:center;overflow:hidden;}
-  .proj-thumb img{width:100%;height:100%;object-fit:cover;}
-  .proj-thumb-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;}
-  .proj-thumb-placeholder svg{width:32px;height:32px;stroke:var(--purple);fill:none;stroke-width:1.5;}
-  .proj-thumb-placeholder span{font-size:12px;color:var(--purple);font-weight:500;}
-  .proj-body{padding:1.25rem;}
-  .proj-name{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:5px;}
-  .proj-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:10px;}
+  .project-row{padding:1.5rem 1.75rem;display:grid;grid-template-columns:1fr 2fr auto;gap:1.5rem;align-items:center;margin-bottom:16px;}
+  .proj-name{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink);}
+  .proj-desc{font-size:13px;color:var(--ink-soft);margin-bottom:8px;}
   .tags{display:flex;flex-wrap:wrap;gap:6px;}
-  .tag{font-size:11px;padding:3px 9px;border-radius:100px;background:var(--purple-light);color:var(--purple-dark);}
-  .tag.teal{background:var(--teal-light);color:#0F6E56;}
-  .proj-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--purple);margin-top:10px;text-decoration:none;font-weight:500;}
-  .proj-link svg{width:13px;height:13px;stroke:var(--purple);fill:none;stroke-width:2;}
+  .tag{font-size:11px;padding:4px 12px;border-radius:100px;color:var(--green-deep);}
+  .proj-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--green);text-decoration:none;font-weight:600;white-space:nowrap;}
+  .proj-status{font-size:12px;color:var(--ink-soft);white-space:nowrap;}
 
-  /* BLOG */
-  .blog-section{background:var(--purple-light);}
-  .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
-  .blog-card{background:#fff;border:1px solid rgba(108,71,255,0.12);border-radius:14px;padding:1.25rem;transition:border-color 0.2s,transform 0.2s;cursor:pointer;}
-  .blog-card:hover{border-color:var(--purple);transform:translateY(-2px);}
-  .blog-cat{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--purple);margin-bottom:8px;}
-  .blog-title{font-size:14px;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:6px;}
-  .blog-meta{font-size:12px;color:var(--muted);}
-  .blog-arrow{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--purple);margin-top:10px;font-weight:500;}
+  .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+  .blog-card{padding:1.75rem;}
+  .blog-cat{font-size:11px;font-weight:600;color:var(--green);margin-bottom:8px;}
+  .blog-title{font-family:var(--display);font-size:16px;font-weight:600;color:var(--ink);line-height:1.35;margin-bottom:10px;}
+  .blog-excerpt{font-size:13px;color:var(--ink-soft);}
 
-  /* CONTACT */
-  .contact-wrap{background:var(--ink);border-radius:24px;padding:3rem;text-align:center;max-width:640px;margin:0 auto;}
-  .contact-wrap h2{font-family:var(--serif);font-size:36px;color:#fff;margin-bottom:0.5rem;}
-  .contact-wrap p{font-size:15px;color:rgba(255,255,255,0.55);margin-bottom:2rem;}
+  .contact-wrap{padding:3rem;text-align:center;max-width:620px;margin:0 auto;border-radius:24px;}
+  .contact-wrap h2{font-family:var(--display);font-weight:600;font-size:32px;color:#fff;margin-bottom:0.5rem;}
+  .contact-wrap p{font-size:15px;color:rgba(255,255,255,0.65);margin-bottom:2rem;}
   .contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
-  .contact-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;font-family:var(--sans);transition:opacity 0.2s;}
-  .contact-btn:hover{opacity:0.85;}
-  .contact-btn.email{background:var(--purple);color:#fff;}
-  .contact-btn.github{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.15);}
+  .contact-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;font-family:var(--sans);color:#fff;background:var(--dark-bg);box-shadow:5px 5px 10px var(--dark-sd-dark),-5px -5px 10px var(--dark-sd-light);}
+  .contact-btn.email{background:var(--green);box-shadow:none;}
   .contact-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;}
 
-  /* FOOTER */
-  footer{text-align:center;padding:2rem;font-size:13px;color:var(--muted);border-top:1px solid var(--border);}
-  footer a{color:var(--purple);text-decoration:none;}
+  footer{text-align:center;padding:2rem;font-size:13px;color:var(--ink-soft);}
+  footer a{color:var(--green);text-decoration:none;}
 
-  /* ANIMATIONS */
-  .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
-  .fade-in.visible{opacity:1;transform:none;}
-
-  @media(max-width:700px){
-    nav{padding:1rem 1.25rem;}
-    .hero{flex-direction:column-reverse;padding:2rem 1.25rem;min-height:auto;gap:2rem;}
-    .hero-right{display:none;}
-    section{padding:3rem 1.25rem;}
-    .about-grid{grid-template-columns:1fr;}
+  @media(max-width:760px){
+    nav{border-radius:20px;flex-wrap:wrap;gap:10px;padding:0.9rem 1.25rem;}
+    .nav-links{display:none;}
+    .hero-inner{flex-direction:column-reverse;}
+    .hero{padding:4rem 1.25rem 2.5rem;min-height:auto;}
+    section{padding:2.75rem 1.25rem;}
+    .about-grid{grid-template-columns:1fr;padding:1.5rem;}
+    .project-row{grid-template-columns:1fr;text-align:left;}
   }
 </style>
 </head>
 <body>
 
-<nav>
-  <span class="nav-logo">Abinaya Sri</span>
+<div id="preloader">
+  <img src="archon-logo.jpeg" alt="Archon Tech" onerror="this.style.display='none'"/>
+</div>
+
+<nav class="neu">
+  <span class="nav-logo nav-logo-mark"><img src="archon-logo.jpeg" alt="" onerror="this.style.display='none'"/>Abinaya Sri</span>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#achievements">Achievements</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire me</button>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a project</button>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg">
-    <div class="hero-blob"></div>
-    <div class="hero-blob2"></div>
-  </div>
-  <div class="hero-left">
-    <div class="hero-badge"><span class="badge-dot"></span>Available for new projects</div>
-    <h1>Frontend Developer<br/>&amp; <em>SEO Specialist</em></h1>
-    <p class="hero-sub">I help brands build impactful online presence with modern, responsive, and SEO-friendly websites. Started my journey with AI &amp; Web Development — and I haven't stopped building since.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Get in touch</a>
-      <a href="#" class="btn-secondary">Download CV</a>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge neu"><span class="badge-dot"></span>Building Archon Tech</div>
+      <h1>Founder<br/>&amp; <span>web developer</span></h1>
+      <p class="hero-sub">I started Archon Tech to build websites and AI-powered products for businesses that need more than a template. I lead the build end-to-end — from strategy to code to SEO — while studying AI &amp; Machine Learning on the side.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Start a project</a>
+        <a href="https://github.com/Archon-Tech226" class="btn-secondary neu" target="_blank">View GitHub</a>
+      </div>
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="avatar-wrap">
-      <span class="avatar-initials">AS</span>
-      <span class="avatar-tag">Frontend · SEO · AI</span>
+    <div class="hero-right">
+      <div class="photo-frame neu">
+        <img src="profile-photo.jpg" alt="Abinaya Sri" onerror="this.outerHTML='&lt;div class=photo-fallback&gt;&lt;span&gt;AS&lt;/span&gt;&lt;/div&gt;'"/>
+      </div>
     </div>
   </div>
 </section>
 
-<hr class="divider"/>
-
-<!-- ABOUT -->
 <section id="about">
-  <div class="sec-inner fade-in">
+  <div class="sec-inner">
     <div class="sec-eyebrow">About me</div>
-    <div class="about-grid">
+    <div class="about-grid neu">
       <div>
-        <h2 class="sec-title">Building the web,<br/>one pixel at a time</h2>
-        <p class="about-text">I started my journey with Artificial Intelligence &amp; Web Development. I help brands build impactful online presence with modern, responsive, and SEO-friendly websites.<br/><br/>As the founder of Archon Tech, I combine clean code with strong search visibility and AI-driven strategies to deliver real results for businesses of all sizes.</p>
-      </div>
-      <div class="about-stats">
-        <div class="stat-card"><span class="stat-num">3+</span><span class="stat-label">Services offered</span></div>
-        <div class="stat-card"><span class="stat-num">2nd</span><span class="stat-label">Hackathon prize</span></div>
-        <div class="stat-card"><span class="stat-num">1</span><span class="stat-label">Company founded</span></div>
-        <div class="stat-card"><span class="stat-num">7</span><span class="stat-label">Blog topics</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider"/>
-
-<!-- SKILLS -->
-<section class="skills-section" id="skills">
-  <div class="sec-inner fade-in">
-    <div class="sec-eyebrow">Skills</div>
-    <h2 class="sec-title">What I work with</h2>
-    <div class="skills-grid">
-      <span class="skill-pill hl">Frontend Development</span>
-      <span class="skill-pill hl">SEO Optimization</span>
-      <span class="skill-pill hl">UI/UX Design</span>
-      <span class="skill-pill teal">Cyber Security</span>
-      <span class="skill-pill teal">Data Visualization</span>
-      <span class="skill-pill teal">Software Testing</span>
-      <span class="skill-pill">Artificial Intelligence</span>
-      <span class="skill-pill">Machine Learning</span>
-      <span class="skill-pill">SaaS Development</span>
-      <span class="skill-pill">Digital Marketing</span>
-      <span class="skill-pill">Time Management</span>
-      <span class="skill-pill">Leadership</span>
-      <span class="skill-pill">HTML &amp; CSS</span>
-      <span class="skill-pill">JavaScript</span>
-      <span class="skill-pill">Responsive Design</span>
-    </div>
-  </div>
-</section>
-
-<hr class="divider"/>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="sec-inner fade-in">
-    <div class="sec-eyebrow">Services</div>
-    <h2 class="sec-title">What I offer</h2>
-    <div class="services-grid">
-      <div class="svc-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <h2 class="sec-title">Why I started<br/>Archon Tech</h2>
+        <div class="about-text">
+          <p>I started Archon Tech because most small businesses were being sold generic templates and calling it a website. I wanted to build things properly — fast, responsive, and actually found by the people searching for them.</p>
+          <p>I run the studio with a small team of 3 while studying AI &amp; Machine Learning, which shapes how I build: I treat every client project like a product, not a one-off job — thinking about what it needs after launch, not just at handoff.</p>
         </div>
+      </div>
+      <div class="stat-strip">
+        <div class="stat neu-in"><span class="stat-num">5+</span><span class="stat-label">Projects shipped</span></div>
+        <div class="stat neu-in"><span class="stat-num">1</span><span class="stat-label">Company founded</span></div>
+        <div class="stat neu-in"><span class="stat-num">2nd</span><span class="stat-label">Hackathon prize</span></div>
+        <div class="stat neu-in"><span class="stat-num">6</span><span class="stat-label">Certifications</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="sec-inner">
+    <div class="skills-panel neu">
+      <div class="sec-eyebrow">Skills</div>
+      <h2 class="sec-title">What I work with</h2>
+      <div class="skill-group">
+        <div class="skill-group-label">Core stack</div>
+        <div class="skills-grid">
+          <span class="skill-pill core neu-green">Python</span>
+          <span class="skill-pill core neu-green">Django</span>
+          <span class="skill-pill core neu-green">JavaScript</span>
+          <span class="skill-pill core neu-green">HTML &amp; CSS</span>
+          <span class="skill-pill core neu-green">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Also using</div>
+        <div class="skills-grid">
+          <span class="skill-pill neu-in">MongoDB</span>
+          <span class="skill-pill neu-in">Git &amp; GitHub</span>
+          <span class="skill-pill neu-in">Machine Learning</span>
+          <span class="skill-pill neu-in">Data Visualization</span>
+          <span class="skill-pill neu-in">SEO</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Working style</div>
+        <div class="skills-grid">
+          <span class="skill-pill neu-in">Design Thinking</span>
+          <span class="skill-pill neu-in">Leadership</span>
+          <span class="skill-pill neu-in">Time Management</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Services</div>
+    <h2 class="sec-title">What Archon Tech offers</h2>
+    <div class="services-grid">
+      <div class="svc-card neu">
+        <div class="svc-icon neu-green"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
         <div class="svc-name">Web development</div>
         <div class="svc-desc">Building responsive, fast, and modern websites tailored to your brand and business goals.</div>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        </div>
+      <div class="svc-card neu">
+        <div class="svc-icon neu-green"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
         <div class="svc-name">UI/UX design</div>
         <div class="svc-desc">Crafting clean, user-friendly interfaces that guide visitors and convert them into customers.</div>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
+      <div class="svc-card neu">
+        <div class="svc-icon neu-green"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
         <div class="svc-name">SEO optimization</div>
         <div class="svc-desc">Improving search rankings and organic visibility so your business gets found by the right people.</div>
       </div>
@@ -279,157 +276,147 @@
   </div>
 </section>
 
-<hr class="divider"/>
-
-<!-- ACHIEVEMENTS -->
 <section id="achievements">
-  <div class="sec-inner fade-in">
+  <div class="sec-inner">
     <div class="sec-eyebrow">Achievements</div>
-    <h2 class="sec-title">Milestones &amp; wins</h2>
+    <h2 class="sec-title">Milestones &amp; certifications</h2>
     <div class="ach-grid">
-      <div class="ach-card">
-        <div class="ach-icon gold">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
+      <div class="ach-card neu">
+        <div class="ach-icon neu-green"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
         <div>
-          <span class="prize-badge">2nd Prize</span>
-          <div class="ach-title">24-Hour Hackathon Winner</div>
-          <div class="ach-desc">Won 2nd prize at a 24-hour hackathon for the <strong>Wild Corridor Conflict</strong> project — a solution addressing wildlife-human conflict in forest corridors.</div>
+          <span class="prize-badge neu-purple" style="color:var(--purple);">2nd place</span>
+          <div class="ach-title">24-hour hackathon — Wildlife Corridor</div>
+          <div class="ach-desc">Built the dashboard for a solution addressing wildlife-human conflict in forest corridors, placing 2nd overall.</div>
         </div>
       </div>
-      <div class="ach-card">
-        <div class="ach-icon purple">
-          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-        </div>
+      <div class="ach-card neu">
+        <div class="ach-icon neu-green"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
         <div>
           <div class="ach-title">Founded Archon Tech</div>
-          <div class="ach-desc">Launched Archon Tech to provide professional web development and SEO services for brands and businesses looking to grow online.</div>
+          <div class="ach-desc">Launched Archon Tech to provide professional web development and SEO services for growing businesses.</div>
         </div>
       </div>
+      <div class="ach-card neu">
+        <div class="ach-icon neu-green"><svg viewBox="0 0 24 24"><path d="M17 8l4 4-4 4M3 12h18"/></svg></div>
+        <div>
+          <div class="ach-title">Peer learning session for juniors</div>
+          <div class="ach-desc">Conducted a peer learning session on foundational AI concepts, sharing what I've learned with juniors in the department.</div>
+        </div>
+      </div>
+      <div class="ach-card neu">
+        <div class="ach-icon neu-green"><svg viewBox="0 0 24 24"><path d="M12 1v6m0 6v10M8 5a4 4 0 1 1 8 0c0 3-4 4-4 6"/></svg></div>
+        <div>
+          <div class="ach-title">Master of Ceremony</div>
+          <div class="ach-desc">Hosted as MC for the counselling cell's programs and college inaugurations, anchoring the stage from open to close.</div>
+        </div>
+      </div>
+    </div>
+    <div class="cert-strip neu">
+      <div class="cert-chip neu-in"><span class="dot"></span><span class="cert-name">MongoDB</span><span class="cert-issuer">— IBM</span></div>
+      <div class="cert-chip neu-in"><span class="dot"></span><span class="cert-name">Cybersecurity</span><span class="cert-issuer">— Infosys</span></div>
+      <div class="cert-chip neu-in"><span class="dot"></span><span class="cert-name">Data Visualization</span><span class="cert-issuer">— Robomatic</span></div>
+      <div class="cert-chip neu-in"><span class="dot"></span><span class="cert-name">Time Management</span><span class="cert-issuer">— Infosys</span></div>
+      <div class="cert-chip neu-in"><span class="dot"></span><span class="cert-name">Design Thinking</span><span class="cert-issuer">— IBM</span></div>
+      <div class="cert-chip neu-in"><span class="dot"></span><span class="cert-name">Machine Learning Engineer</span><span class="cert-issuer">— AWS</span></div>
     </div>
   </div>
 </section>
 
-<hr class="divider"/>
-
-<!-- PROJECTS -->
 <section id="projects">
-  <div class="sec-inner fade-in">
+  <div class="sec-inner">
     <div class="sec-eyebrow">Projects</div>
     <h2 class="sec-title">Recent work</h2>
-    <div class="projects-grid">
-      <div class="proj-card">
-        <div class="proj-thumb">
-          <img src="https://archon-tech226.github.io/abinaya/poster 1.png" alt="E-Commerce Project" onerror="this.parentElement.innerHTML='<div class=proj-thumb-placeholder><svg viewBox=\'0 0 24 24\'><path d=\'M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\'/><line x1=\'3\' y1=\'6\' x2=\'21\' y2=\'6\'/><path d=\'M16 10a4 4 0 0 1-8 0\'/></svg><span>E-Commerce</span></div>'"/>
-        </div>
-        <div class="proj-body">
-          <div class="proj-name">E-commerce project</div>
-          <div class="proj-desc">Responsive static e-commerce website with clean product listings and modern layout.</div>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span></div>
-          <a href="https://archon-tech226.github.io/mystore.in/" class="proj-link" target="_blank">View live <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        </div>
+
+    <div class="skill-group-label" style="margin-bottom:0.9rem;">Archon Tech client work</div>
+    <div class="project-row neu">
+      <div class="proj-name">Clothing store billing system</div>
+      <div>
+        <div class="proj-desc">Billing software for product details, sales transactions, and invoice generation, designed to simplify billing operations for a retail client.</div>
+        <div class="tags"><span class="tag neu-in">Django</span><span class="tag neu-in">Billing</span></div>
       </div>
-      <div class="proj-card">
-        <div class="proj-thumb" style="background:#E0F7F4;">
-          <div class="proj-thumb-placeholder">
-            <svg viewBox="0 0 24 24" style="stroke:#0ABFA3;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            <span style="color:#0F6E56;">Archon Tech</span>
-          </div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-name">Archon Tech website</div>
-          <div class="proj-desc">Official agency website showcasing professional web development and SEO services.</div>
-          <div class="tags"><span class="tag teal">Web dev</span><span class="tag teal">SEO</span><span class="tag teal">Agency</span></div>
-          <a href="https://archon-tech226.github.io/archontech.com/" class="proj-link" target="_blank">View live <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        </div>
+      <span class="proj-status">Client project</span>
+    </div>
+
+    <div class="project-row neu">
+      <div class="proj-name">Archon Tech website</div>
+      <div>
+        <div class="proj-desc">The studio's own website — built to showcase Archon Tech's web development and SEO services.</div>
+        <div class="tags"><span class="tag neu-in">Web dev</span><span class="tag neu-in">SEO</span></div>
       </div>
-      <div class="proj-card">
-        <div class="proj-thumb" style="background:#FFF8E6;">
-          <div class="proj-thumb-placeholder">
-            <svg viewBox="0 0 24 24" style="stroke:#B87A00;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span style="color:#B87A00;">Wild Corridor</span>
-          </div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-name">Wild Corridor Conflict</div>
-          <div class="proj-desc">Hackathon project addressing wildlife-human conflict in forest corridors. Won 2nd prize at a 24-hour hackathon.</div>
-          <div class="tags"><span class="tag" style="background:#FFF8E6;color:#B87A00;">Hackathon</span><span class="tag" style="background:#FFF8E6;color:#B87A00;">2nd Prize</span></div>
-        </div>
+      <span class="proj-status">Completed</span>
+    </div>
+
+    <div class="project-row neu">
+      <div class="proj-name">E-commerce project</div>
+      <div>
+        <div class="proj-desc">Responsive static e-commerce website with clean product listings and a modern layout.</div>
+        <div class="tags"><span class="tag neu-in">HTML</span><span class="tag neu-in">CSS</span></div>
       </div>
+      <span class="proj-status">Completed</span>
+    </div>
+
+    <div class="skill-group-label" style="margin:2rem 0 0.9rem;">Independent builds</div>
+    <div class="project-row neu">
+      <div class="proj-name">ProChat</div>
+      <div>
+        <div class="proj-desc">Multi-role AI-powered SaaS workspace for students, freelancers, workers, and companies — Django, MySQL, Redis, and the Google Gemini API, with an AI meeting-summarization feature.</div>
+        <div class="tags"><span class="tag neu-in">Django</span><span class="tag neu-in">MySQL</span><span class="tag neu-in">AI</span></div>
+      </div>
+      <span class="proj-status">Deployment in progress</span>
+    </div>
+
+    <div class="project-row neu">
+      <div class="proj-name">Wildlife Corridor dashboard</div>
+      <div>
+        <div class="proj-desc">Hackathon dashboard addressing wildlife-human conflict in forest corridors — won 2nd place at a 24-hour hackathon.</div>
+        <div class="tags"><span class="tag neu-in">Hackathon</span><span class="tag neu-in">2nd prize</span></div>
+      </div>
+      <span class="proj-status">Hackathon build</span>
     </div>
   </div>
 </section>
 
-<hr class="divider"/>
-
-<!-- BLOG -->
-<section class="blog-section" id="blog">
-  <div class="sec-inner fade-in">
+<section id="blog">
+  <div class="sec-inner">
     <div class="sec-eyebrow">Blog</div>
-    <h2 class="sec-title" style="color:var(--ink);">Thoughts &amp; insights</h2>
+    <h2 class="sec-title">Thoughts &amp; insights</h2>
     <div class="blog-grid">
-      <div class="blog-card">
-        <div class="blog-cat">Web development</div>
-        <div class="blog-title">Building modern responsive websites in 2025</div>
-        <div class="blog-meta">Coming soon</div>
-        <div class="blog-arrow">Read more →</div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-cat">SEO</div>
-        <div class="blog-title">How to rank on Google with zero-budget SEO</div>
-        <div class="blog-meta">Coming soon</div>
-        <div class="blog-arrow">Read more →</div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-cat">AI &amp; ML</div>
-        <div class="blog-title">How AI is reshaping web development</div>
-        <div class="blog-meta">Coming soon</div>
-        <div class="blog-arrow">Read more →</div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-cat">SaaS</div>
-        <div class="blog-title">From idea to SaaS product — a beginner's guide</div>
-        <div class="blog-meta">Coming soon</div>
-        <div class="blog-arrow">Read more →</div>
-      </div>
-      <div class="blog-card">
+      <div class="blog-card neu">
         <div class="blog-cat">Leadership</div>
         <div class="blog-title">Leading a tech startup at a young age</div>
-        <div class="blog-meta">Coming soon</div>
-        <div class="blog-arrow">Read more →</div>
+        <div class="blog-excerpt">I founded Archon Tech while still a first-year AI &amp; ML student. There's no manual for running client calls between lectures. What works: treat every client like your biggest one, say no to scope you can't deliver well, and keep building in public — most of my early clients found me through people watching the process, not a pitch.</div>
       </div>
-      <div class="blog-card">
-        <div class="blog-cat">Digital marketing</div>
-        <div class="blog-title">Digital marketing strategies that actually work</div>
-        <div class="blog-meta">Coming soon</div>
-        <div class="blog-arrow">Read more →</div>
+      <div class="blog-card neu">
+        <div class="blog-cat">SEO</div>
+        <div class="blog-title">Zero-budget SEO for small businesses</div>
+        <div class="blog-excerpt">Most small business owners think SEO means a big monthly retainer. It doesn't. Start with a complete Google Business Profile, a fast mobile-friendly site, and the words your customers actually search — not the terms in your brochure. That's an afternoon of work, not a budget line.</div>
       </div>
-      <div class="blog-card">
-        <div class="blog-cat">ML</div>
-        <div class="blog-title">Machine learning for non-engineers — a primer</div>
-        <div class="blog-meta">Coming soon</div>
-        <div class="blog-arrow">Read more →</div>
+      <div class="blog-card neu">
+        <div class="blog-cat">Web development</div>
+        <div class="blog-title">Building modern responsive websites in 2026</div>
+        <div class="blog-excerpt">Responsive used to mean "does it work on mobile." Now it means the site should feel considered on every screen. The shift isn't more breakpoints — it's content that adapts: type with real hierarchy, layouts that reflow, images that stay sharp without slowing the page down.</div>
       </div>
     </div>
   </div>
 </section>
 
-<hr class="divider"/>
-
-<!-- CONTACT -->
 <section id="contact">
-  <div class="sec-inner fade-in">
-    <div class="contact-wrap">
-      <h2>Let's work together</h2>
-      <p>Got a project in mind? I'd love to hear about it. Drop me a message and let's build something great.</p>
+  <div class="sec-inner">
+    <div class="contact-wrap neu-dark">
+      <h2>Let's build something</h2>
+      <p>Have a project in mind? Tell me what you're trying to build, and let's talk about how Archon Tech can help.</p>
       <div class="contact-links">
-        <a href="mailto:your@email.com" class="contact-btn email">
+        <a href="mailto:founder.archon@gmail.com" class="contact-btn email">
           <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Email me
         </a>
-        <a href="https://archon-tech226.github.io/archontech.com/" class="contact-btn github" target="_blank">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Archon Tech
+        <a href="https://github.com/Archon-Tech226" class="contact-btn" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/abinaya-sri-2529aa37b" class="contact-btn" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
         </a>
       </div>
     </div>
@@ -437,14 +424,16 @@
 </section>
 
 <footer>
-  © 2025 Abinaya Sri · All rights reserved · Built with passion &amp; <a href="https://archon-tech226.github.io/archontech.com/">Archon Tech</a>
+  © 2026 Abinaya Sri · All rights reserved · Built with passion &amp; <a href="https://archon-tech226.github.io/archontech.com/">Archon Tech</a>
 </footer>
 
 <script>
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold: 0.1});
-document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      var p = document.getElementById('preloader');
+      if(p){ p.classList.add('hide'); setTimeout(function(){ p.remove(); }, 550); }
+    }, 900);
+  });
 </script>
 </body>
 </html>
